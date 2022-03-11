@@ -47,7 +47,7 @@ export default function Home({ posts }: Props) {
                 alt="PostImage"
                 className="h-60 w-full object-cover transition-transform duration-200 ease-in-out group-hover:scale-105"
               />
-              <div className="flex justify-between bg-orange-700 p-5">
+              <div className="flex justify-between bg-gray-800 p-5">
                 <div>
                   <p className="text-lg font-bold text-white">{post.title}</p>
                   <p className="text-xs text-gray-300">
