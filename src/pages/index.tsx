@@ -6,6 +6,7 @@ import { sanityClient, urlFor } from '../sanity'
 import { Post } from '../typings'
 
 import homeImage from '../assets/home.png'
+import Link from 'next/link'
 
 interface Props {
   posts: [Post]
@@ -37,6 +38,15 @@ export default function Home({ posts }: Props) {
       </div>
 
       {/* posts */}
+      <div>
+        {posts.map((post) => (
+          <Link key={post._id} href={`/post/${post.slug.current}`}>
+            <div>
+              <img src={urlFor(post.mainImage).url()!} alt="PostImage" />
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   )
 }
